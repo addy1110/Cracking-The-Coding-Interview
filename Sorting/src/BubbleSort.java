@@ -3,6 +3,7 @@
  * src: https://www.hackerrank.com/challenges/ctci-bubble-sort
  * Time Complexity: O(n*n)
  * Length of Array: 100000
+ * Number of Swaps: 704982704 (Worst Case)
  * Execution Time: 5.45200 seconds
  */
 
