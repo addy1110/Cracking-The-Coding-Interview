@@ -6,18 +6,6 @@ import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class ArraysLeftRotation {
-    public static int[] arrayLeftRotation(int[] a, int n, int k) {
-        while(k>0){
-            for(int i=0;i<n-1;i++){
-                int temp = a[i];
-                a[i]=a[i+1];
-                a[i+1]=temp;
-            }
-            k--;
-        }
-
-        return a;
-    }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -31,16 +19,6 @@ public class ArraysLeftRotation {
         NumberFormat formatter = new DecimalFormat("#0.00000");
         long startTime = System.currentTimeMillis();
 
-       /* while(k>0){
-            for(int i=0;i<n-1;i++){
-                int temp = a[i];
-                a[i]=a[i+1];
-                a[i+1]=temp;
-            }
-            k--;
-        }
-
-        //int[] output = arrayLeftRotation(a, n, k);*/
         for(int i = 0; i < n; i++)
         System.out.print(a[i]+" ");
 
