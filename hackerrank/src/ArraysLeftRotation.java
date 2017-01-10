@@ -1,11 +1,7 @@
-/**
- * Created by ADDY on 09/01/17.
- */
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.ArrayList;
 import java.util.Scanner;
-public class ArraysLeftRotation {
+class ArraysLeftRotation {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
