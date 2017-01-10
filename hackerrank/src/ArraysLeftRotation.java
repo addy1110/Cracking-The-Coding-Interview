@@ -1,3 +1,8 @@
+/**
+ * Created by ADDY on 09/01/17.
+ * src : https://www.hackerrank.com/challenges/ctci-array-left-rotation
+ *
+ */
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Scanner;
