@@ -61,15 +61,23 @@ public class QuickSort {
 
     public static void main(String[] args) {
 
-        Scanner in  = new Scanner(System.in);
-        int len = in.nextInt();
-        in.nextLine();
-        int[] arr = new int[len];
-        for(int i=0;i<len;i++){
-            arr[i] = in.nextInt();
+//        Scanner in  = new Scanner(System.in);
+//        int len = in.nextInt();
+//        in.nextLine();
+//        int[] arr = new int[len];
+//        for(int i=0;i<len;i++){
+//            arr[i] = in.nextInt();
+//        }
+
+        int len = 10000000;
+        int[] array = new int[len];
+        int j=0;
+        for(int i=len;i>0;i--){
+            array[j] = i;
+            j++;
         }
 
-        QuickSort qs = new QuickSort(arr);
+        QuickSort qs = new QuickSort(array);
 
         NumberFormat formatter = new DecimalFormat("#0.00000");
         long startTime = System.currentTimeMillis();
@@ -82,6 +90,6 @@ public class QuickSort {
 
         System.out.println("Execution time is " + formatter.format((totalTime) / 1000d) + " seconds");
         //qs.printArray();
-        in.close();
+        //in.close();
     }
 }

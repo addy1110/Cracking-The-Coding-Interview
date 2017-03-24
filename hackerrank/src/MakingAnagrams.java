@@ -3,29 +3,32 @@
  * src: https://www.hackerrank.com/challenges/ctci-making-anagrams
  *
  */
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
+import java.util.*;
 class MakingAnagrams {
-    static Set<Character> getSet(String str){
-        Set<Character> S1 = new HashSet<>();
-        for(char c: str.toCharArray()){
-            S1.add(c);
+    static Map<Character, Integer> getMap(char[] charArray){
+        Integer count;
+        Map<Character, Integer> map = new HashMap<>();
+        for (Character i : charArray) {
+            count = map.get(i);
+//            System.out.println(map.get(i));
+            map.put(i, count != null ? count+1 : 1);
         }
-        return S1;
+
+        return map;
     }
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        String first = in.nextLine();
-        String second = in.nextLine();
+        char[] first = in.nextLine().toCharArray();
+        char[] second = in.nextLine().toCharArray();
 
-        Set<Character> f = getSet(first);
-        Set<Character> s = getSet(second);
+        Map<Character, Integer> fMap = getMap(first);
+        Map<Character, Integer> sMap = getMap(second);
 
-        Set<Character> inter = new HashSet<>();
-
-        System.out.println(f.retainAll(s));
-        System.out.println(f);
+        System.out.println(fMap);
+        System.out.println(sMap);
+        System.out.println(fMap.equals(sMap));
     }
 }
