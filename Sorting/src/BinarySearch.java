@@ -1,8 +1,9 @@
 import java.util.Scanner;
-
 /**
  * Created by ADDY on 24/03/17.
+ * src: http://quiz.geeksforgeeks.org/binary-search/
  */
+
 public class BinarySearch {
 
     public static int binarySearch(int[] array, int low, int high, int item){
