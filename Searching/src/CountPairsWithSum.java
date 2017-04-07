@@ -1,17 +1,25 @@
+import java.util.HashMap;
+
 /**
  * Created by ADDY on 06/04/17.
+ * src: http://www.geeksforgeeks.org/count-pairs-with-given-sum/
  */
 public class CountPairsWithSum {
 
-    static int countPairs(int[] arr){
-        int count=-1;
-
-        return count;
+    static int countPairs(int[] arr, int sum){
+        int count=0;
+        // get count of each occurrences
+        HashMap<Integer,Integer> repititions = FindDuplicates.countDuplicates(arr);
+        for(int i=0;i<arr.length;i++){
+            count += repititions.get(sum-arr[i]);
+            if(sum - arr[i] == arr[i]) count--;
+        }
+        return count/2;
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3,4,5,9,8,7,6,10,11,12,13,19,18,17,16,15,14};
+        int[] arr = {1,5,2,4,-3,9,3,3};
 
-        System.out.println(countPairs(arr));
+        System.out.println(countPairs(arr, 6));
     }
 }
