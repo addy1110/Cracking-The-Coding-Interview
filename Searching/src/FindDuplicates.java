@@ -18,7 +18,7 @@ public class FindDuplicates {
         for(Integer duplicates: dups) System.out.print(duplicates+" ");
     }
 
-    static void countDuplicates(int[] arr){
+    static HashMap<Integer,Integer> countDuplicates(int[] arr){
 
         HashMap<Integer,Integer> repetitions = new HashMap<>();
         for(int item: arr){
@@ -26,7 +26,7 @@ public class FindDuplicates {
             else repetitions.put(item,1);
         }
 
-        System.out.println(repetitions);
+        return repetitions;
 
     }
 
